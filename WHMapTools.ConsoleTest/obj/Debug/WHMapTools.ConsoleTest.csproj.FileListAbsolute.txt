@@ -1,0 +1,14 @@
+C:\Users\jponceju\Documents\Visual Studio 2013\Projects\WHMapTools\WHMapTools.ConsoleTest\bin\Debug\WHMapTools.ConsoleTest.exe.config
+C:\Users\jponceju\Documents\Visual Studio 2013\Projects\WHMapTools\WHMapTools.ConsoleTest\bin\Debug\WHMapTools.ConsoleTest.exe
+C:\Users\jponceju\Documents\Visual Studio 2013\Projects\WHMapTools\WHMapTools.ConsoleTest\bin\Debug\WHMapTools.ConsoleTest.pdb
+C:\Users\jponceju\Documents\Visual Studio 2013\Projects\WHMapTools\WHMapTools.ConsoleTest\bin\Debug\WHMapTools.dll
+C:\Users\jponceju\Documents\Visual Studio 2013\Projects\WHMapTools\WHMapTools.ConsoleTest\bin\Debug\WHMapTools.pdb
+C:\Users\jponceju\Documents\Visual Studio 2013\Projects\WHMapTools\WHMapTools.ConsoleTest\obj\Debug\WHMapTools.ConsoleTest.csprojResolveAssemblyReference.cache
+C:\Users\jponceju\Documents\Visual Studio 2013\Projects\WHMapTools\WHMapTools.ConsoleTest\obj\Debug\WHMapTools.ConsoleTest.exe
+C:\Users\jponceju\Documents\Visual Studio 2013\Projects\WHMapTools\WHMapTools.ConsoleTest\obj\Debug\WHMapTools.ConsoleTest.pdb
+F:\WHMapTools\WHMapTools.ConsoleTest\bin\Debug\WHMapTools.ConsoleTest.exe.config
+F:\WHMapTools\WHMapTools.ConsoleTest\obj\Debug\WHMapTools.ConsoleTest.exe
+F:\WHMapTools\WHMapTools.ConsoleTest\obj\Debug\WHMapTools.ConsoleTest.pdb
+C:\Users\Novanotio\Desktop\WHMapTools\WHMapTools.ConsoleTest\bin\Debug\WHMapTools.ConsoleTest.exe.config
+C:\Users\Novanotio\Desktop\WHMapTools\WHMapTools.ConsoleTest\obj\Debug\WHMapTools.ConsoleTest.exe
+C:\Users\Novanotio\Desktop\WHMapTools\WHMapTools.ConsoleTest\obj\Debug\WHMapTools.ConsoleTest.pdb

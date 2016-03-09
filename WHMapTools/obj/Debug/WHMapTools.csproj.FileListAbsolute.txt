@@ -1,0 +1,5 @@
+C:\Users\jponceju\Documents\Visual Studio 2013\Projects\WHMapTools\WHMapTools\bin\Debug\WHMapTools.dll
+C:\Users\jponceju\Documents\Visual Studio 2013\Projects\WHMapTools\WHMapTools\bin\Debug\WHMapTools.pdb
+C:\Users\jponceju\Documents\Visual Studio 2013\Projects\WHMapTools\WHMapTools\obj\Debug\WHMapTools.dll
+C:\Users\jponceju\Documents\Visual Studio 2013\Projects\WHMapTools\WHMapTools\obj\Debug\WHMapTools.pdb
+C:\Users\jponceju\Documents\Visual Studio 2013\Projects\WHMapTools\WHMapTools\obj\Debug\WHMapTools.csprojResolveAssemblyReference.cache
