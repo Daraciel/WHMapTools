@@ -122,7 +122,7 @@ namespace WHMapTools.Maps
                 Brush brush = new SolidBrush(GetColorByLandType((byte)landType));
                 graphics.FillRectangle(brush, 2, 2, 20, width - 2);
                 String text = (byte)landType + " = " + landType.ToString();
-                graphics.DrawString(text, new Font("Tahoma", 20), Brushes.White, width + 2, 0);
+                graphics.DrawString(text, new Font("Tahoma", 5), Brushes.White, 20 + 4, 2);
             }
                 return result;
         }
