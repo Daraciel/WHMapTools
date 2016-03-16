@@ -137,7 +137,7 @@ namespace WHMapTools.Factories
             Seed = null;
             //Size = new Tuple<int, int>(200, 330);
             Size = new Tuple<int, int>(40, 80);
-            DebugChunkIterations = 10;
+            DebugChunkIterations = 32;
             Debug = false;
 
         }

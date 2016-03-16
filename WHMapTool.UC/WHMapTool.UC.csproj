@@ -42,33 +42,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GroupBox\GBCivilization.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="GroupBox\GBCivilization.Designer.cs">
-      <DependentUpon>GBCivilization.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MapDesignerPanel.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="MapDesignerPanel.Designer.cs">
-      <DependentUpon>MapDesignerPanel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl1.cs">
+    <Compile Include="CivilizationMapDesigner.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="CivilizationMapDesigner.Designer.cs">
+      <DependentUpon>CivilizationMapDesigner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IMapDesigner.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="GroupBox\GBCivilization.resx">
-      <DependentUpon>GBCivilization.cs</DependentUpon>
+    <ProjectReference Include="..\WHMapTools\WHMapTools.csproj">
+      <Project>{bee95761-c8c3-4bbf-9c08-a88d7176430b}</Project>
+      <Name>WHMapTools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CivilizationMapDesigner.resx">
+      <DependentUpon>CivilizationMapDesigner.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MapDesignerPanel.resx">
-      <DependentUpon>MapDesignerPanel.cs</DependentUpon>
+    <EmbeddedResource Include="IMapDesigner.resx">
+      <DependentUpon>IMapDesigner.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

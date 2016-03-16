@@ -15,3 +15,8 @@ C:\Users\Novanotio\Desktop\WHMapTools\WHMapTools.ConsoleTest\obj\Debug\WHMapTool
 C:\Users\Novanotio\Documents\WHMapTools\WHMapTools.ConsoleTest\bin\Debug\WHMapTools.ConsoleTest.exe.config
 C:\Users\Novanotio\Documents\WHMapTools\WHMapTools.ConsoleTest\obj\Debug\WHMapTools.ConsoleTest.exe
 C:\Users\Novanotio\Documents\WHMapTools\WHMapTools.ConsoleTest\obj\Debug\WHMapTools.ConsoleTest.pdb
+C:\Users\Novanotio\Documents\WHMapTools\WHMapTools.ConsoleTest\bin\Debug\WHMapTools.ConsoleTest.exe
+C:\Users\Novanotio\Documents\WHMapTools\WHMapTools.ConsoleTest\bin\Debug\WHMapTools.ConsoleTest.pdb
+C:\Users\Novanotio\Documents\WHMapTools\WHMapTools.ConsoleTest\bin\Debug\WHMapTools.dll
+C:\Users\Novanotio\Documents\WHMapTools\WHMapTools.ConsoleTest\bin\Debug\WHMapTools.pdb
+C:\Users\Novanotio\Documents\WHMapTools\WHMapTools.ConsoleTest\obj\Debug\WHMapTools.ConsoleTest.csprojResolveAssemblyReference.cache
