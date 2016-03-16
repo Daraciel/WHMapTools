@@ -26,8 +26,8 @@ namespace WHMapTools.ConsoleTest
         {
             InitializeParams inip = new InitializeParams();
             inip.Parameters.Add(Enums.AlgorithmParameters.DEBUG, true);
-            inip.Parameters.Add(Enums.AlgorithmParameters.LANDMASS, 1);
             inip.Parameters.Add(Enums.AlgorithmParameters.DEBUGCHUNKITERATIONS, 9999);
+            inip.Parameters.Add(Enums.AlgorithmParameters.LANDMASS, 1);
             Civilization1 factory = new Civilization1();
             factory.Notify += OnNotify;
             factory.Initialize(inip);

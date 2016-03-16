@@ -29,6 +29,14 @@ namespace WHMapTool.UC
             inip.Parameters.Add(WHMapTools.Enums.AlgorithmParameters.TEMPERATURE, Int32.Parse(nudTemperature.Value.ToString()));
             inip.Parameters.Add(WHMapTools.Enums.AlgorithmParameters.CLIMATE, Int32.Parse(nudClimate.Value.ToString()));
             inip.Parameters.Add(WHMapTools.Enums.AlgorithmParameters.AGE, Int32.Parse(nudAge.Value.ToString()));
+
+            if(chkDebug.Checked)
+            {
+                inip.Parameters.Add(WHMapTools.Enums.AlgorithmParameters.DEBUG, true);
+                inip.Parameters.Add(WHMapTools.Enums.AlgorithmParameters.DEBUGCHUNKITERATIONS, Int32.Parse(nudChunkIterations.Value.ToString()));
+                inip.Parameters.Add(WHMapTools.Enums.AlgorithmParameters.SEED, Int32.Parse(nudSeed.Value.ToString()));
+
+            }
             Civilization1 factory = new Civilization1();
             factory.Initialize(inip);
             this.Map = factory.Create();

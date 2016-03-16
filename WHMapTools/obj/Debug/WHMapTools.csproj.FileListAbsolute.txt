@@ -7,3 +7,8 @@ C:\Users\Novanotio\Documents\WHMapTools\WHMapTools\bin\Debug\WHMapTools.dll
 C:\Users\Novanotio\Documents\WHMapTools\WHMapTools\bin\Debug\WHMapTools.pdb
 C:\Users\Novanotio\Documents\WHMapTools\WHMapTools\obj\Debug\WHMapTools.dll
 C:\Users\Novanotio\Documents\WHMapTools\WHMapTools\obj\Debug\WHMapTools.pdb
+C:\Users\Wolves\Documents\GitHub\WHMapTools\WHMapTools\bin\Debug\WHMapTools.dll
+C:\Users\Wolves\Documents\GitHub\WHMapTools\WHMapTools\bin\Debug\WHMapTools.pdb
+C:\Users\Wolves\Documents\GitHub\WHMapTools\WHMapTools\obj\Debug\WHMapTools.dll
+C:\Users\Wolves\Documents\GitHub\WHMapTools\WHMapTools\obj\Debug\WHMapTools.pdb
+C:\Users\Wolves\Documents\GitHub\WHMapTools\WHMapTools\obj\Debug\WHMapTools.csprojResolveAssemblyReference.cache

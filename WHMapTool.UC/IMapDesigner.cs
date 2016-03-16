@@ -40,11 +40,11 @@ namespace WHMapTool.UC
         private void InitializeComponent()
         {
             this.gbParameters = new System.Windows.Forms.GroupBox();
+            this.chkDebug = new System.Windows.Forms.CheckBox();
+            this.gbDebugParams = new System.Windows.Forms.GroupBox();
             this.btnGenerate = new System.Windows.Forms.Button();
             this.gbMap = new System.Windows.Forms.GroupBox();
             this.pbMap = new System.Windows.Forms.PictureBox();
-            this.gpDebugParams = new System.Windows.Forms.GroupBox();
-            this.chkDebug = new System.Windows.Forms.CheckBox();
             this.gbParameters.SuspendLayout();
             this.gbMap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMap)).BeginInit();
@@ -53,22 +53,49 @@ namespace WHMapTool.UC
             // gbParameters
             // 
             this.gbParameters.Controls.Add(this.chkDebug);
-            this.gbParameters.Controls.Add(this.gpDebugParams);
+            this.gbParameters.Controls.Add(this.gbDebugParams);
             this.gbParameters.Controls.Add(this.btnGenerate);
             this.gbParameters.Dock = System.Windows.Forms.DockStyle.Left;
             this.gbParameters.Location = new System.Drawing.Point(0, 0);
+            this.gbParameters.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbParameters.Name = "gbParameters";
-            this.gbParameters.Size = new System.Drawing.Size(200, 471);
+            this.gbParameters.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbParameters.Size = new System.Drawing.Size(267, 580);
             this.gbParameters.TabIndex = 0;
             this.gbParameters.TabStop = false;
             this.gbParameters.Text = "Parametros";
             // 
+            // chkDebug
+            // 
+            this.chkDebug.AutoSize = true;
+            this.chkDebug.Location = new System.Drawing.Point(8, 346);
+            this.chkDebug.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkDebug.Name = "chkDebug";
+            this.chkDebug.Size = new System.Drawing.Size(72, 21);
+            this.chkDebug.TabIndex = 3;
+            this.chkDebug.Text = "Debug";
+            this.chkDebug.UseVisualStyleBackColor = true;
+            this.chkDebug.CheckedChanged += new System.EventHandler(this.chkDebug_CheckedChanged);
+            // 
+            // gbDebugParams
+            // 
+            this.gbDebugParams.Enabled = false;
+            this.gbDebugParams.Location = new System.Drawing.Point(8, 374);
+            this.gbDebugParams.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbDebugParams.Name = "gbDebugParams";
+            this.gbDebugParams.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbDebugParams.Size = new System.Drawing.Size(251, 166);
+            this.gbDebugParams.TabIndex = 1;
+            this.gbDebugParams.TabStop = false;
+            this.gbDebugParams.Text = "Parametros de Debug";
+            // 
             // btnGenerate
             // 
             this.btnGenerate.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnGenerate.Location = new System.Drawing.Point(3, 445);
+            this.btnGenerate.Location = new System.Drawing.Point(4, 548);
+            this.btnGenerate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGenerate.Name = "btnGenerate";
-            this.btnGenerate.Size = new System.Drawing.Size(194, 23);
+            this.btnGenerate.Size = new System.Drawing.Size(259, 28);
             this.btnGenerate.TabIndex = 0;
             this.btnGenerate.Text = "Generar";
             this.btnGenerate.UseVisualStyleBackColor = true;
@@ -77,9 +104,11 @@ namespace WHMapTool.UC
             // 
             this.gbMap.Controls.Add(this.pbMap);
             this.gbMap.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbMap.Location = new System.Drawing.Point(200, 0);
+            this.gbMap.Location = new System.Drawing.Point(267, 0);
+            this.gbMap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbMap.Name = "gbMap";
-            this.gbMap.Size = new System.Drawing.Size(655, 471);
+            this.gbMap.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbMap.Size = new System.Drawing.Size(873, 580);
             this.gbMap.TabIndex = 1;
             this.gbMap.TabStop = false;
             this.gbMap.Text = "Mapa";
@@ -87,41 +116,22 @@ namespace WHMapTool.UC
             // pbMap
             // 
             this.pbMap.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbMap.Location = new System.Drawing.Point(3, 16);
+            this.pbMap.Location = new System.Drawing.Point(4, 19);
+            this.pbMap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbMap.Name = "pbMap";
-            this.pbMap.Size = new System.Drawing.Size(649, 452);
+            this.pbMap.Size = new System.Drawing.Size(865, 557);
             this.pbMap.TabIndex = 0;
             this.pbMap.TabStop = false;
             // 
-            // gpDebugParams
-            // 
-            this.gpDebugParams.Enabled = false;
-            this.gpDebugParams.Location = new System.Drawing.Point(6, 304);
-            this.gpDebugParams.Name = "gpDebugParams";
-            this.gpDebugParams.Size = new System.Drawing.Size(188, 135);
-            this.gpDebugParams.TabIndex = 1;
-            this.gpDebugParams.TabStop = false;
-            this.gpDebugParams.Text = "Parametros de Debug";
-            // 
-            // chkDebug
-            // 
-            this.chkDebug.AutoSize = true;
-            this.chkDebug.Location = new System.Drawing.Point(6, 281);
-            this.chkDebug.Name = "chkDebug";
-            this.chkDebug.Size = new System.Drawing.Size(58, 17);
-            this.chkDebug.TabIndex = 3;
-            this.chkDebug.Text = "Debug";
-            this.chkDebug.UseVisualStyleBackColor = true;
-            this.chkDebug.CheckedChanged += new System.EventHandler(this.chkDebug_CheckedChanged);
-            // 
             // IMapDesigner
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gbMap);
             this.Controls.Add(this.gbParameters);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "IMapDesigner";
-            this.Size = new System.Drawing.Size(855, 471);
+            this.Size = new System.Drawing.Size(1140, 580);
             this.gbParameters.ResumeLayout(false);
             this.gbParameters.PerformLayout();
             this.gbMap.ResumeLayout(false);
@@ -137,7 +147,7 @@ namespace WHMapTool.UC
         protected GroupBox gbMap;
         protected PictureBox pbMap;
         protected CheckBox chkDebug;
-        protected GroupBox gpDebugParams;
+        protected GroupBox gbDebugParams;
         protected IMap _map;
 
         public IMap Map
@@ -162,10 +172,10 @@ namespace WHMapTool.UC
             switch(chkDebug.Checked)
             {
                 case true:
-                    gbParameters.Enabled = true;
+                    gbDebugParams.Enabled = true;
                     break;
                 case false:
-                    gbParameters.Enabled = false;
+                    gbDebugParams.Enabled = false;
                     break;
             }
         }

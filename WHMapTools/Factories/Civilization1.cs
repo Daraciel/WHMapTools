@@ -18,7 +18,8 @@ namespace WHMapTools.Factories
         #region CONSTANTS
 
         //private Tuple<Point, Point> ChunkRange = new Tuple<Point, Point>(new Point(4, 8), new Point(71, 33));
-        private Tuple<Point, Point> ChunkRange = new Tuple<Point, Point>(new Point(8, 4), new Point(33, 71));
+        private Tuple<Point, Point> StaringPosRange = new Tuple<Point, Point>(new Point(8, 4), new Point(33, 71));
+        private Tuple<Point, Point> ChunkRange = new Tuple<Point, Point>(new Point(3, 3), new Point(45, 76));
         private Tuple<int, int> PathLengthRange = new Tuple<int, int>(1, 64);
 
         #endregion
@@ -136,7 +137,7 @@ namespace WHMapTools.Factories
             Age = 1;
             Seed = null;
             //Size = new Tuple<int, int>(200, 330);
-            Size = new Tuple<int, int>(40, 80);
+            Size = new Tuple<int, int>(50, 80);
             DebugChunkIterations = 32;
             Debug = false;
 
@@ -160,10 +161,11 @@ namespace WHMapTools.Factories
         private void GenerateRandomChunk()
         {
             resultMap.Layers[(int)Civ1MapLayers.STENCILLAYER].Initialize();
-            Point currentPosition = GetRandomValueBetweenRange(ChunkRange);
+            Point currentPosition = GetRandomValueBetweenRange(StaringPosRange);
             int pathLength = GetRandomValueBetweenRange(PathLengthRange);
 
-            while (pathLength > 0 && IsInRange(currentPosition, ChunkRange))
+            SetPositionAsLandInChunk(currentPosition);
+            while (pathLength > 0 && IsChunkInBounds(currentPosition, ChunkRange))
             {
                 MovePointToARandomNeighbour(ref currentPosition, false);
                 SetPositionAsLandInChunk(currentPosition);
@@ -194,6 +196,23 @@ namespace WHMapTools.Factories
             return result;
         }
 
+        private bool IsChunkInBounds(Point currentPosition, Tuple<Point, Point> ChunkRange)
+        {
+            bool result = false;
+            if(IsInRange(currentPosition, ChunkRange))
+            {
+                if (IsInRange(new Point(currentPosition.X+1, currentPosition.Y), ChunkRange))
+                {
+                    if (IsInRange(new Point(currentPosition.X, currentPosition.Y + 1), ChunkRange))
+                    {
+                        result = true;
+                    }
+                }
+            }
+
+            return result;
+        }
+
         private bool IsInRange(Point currentPosition, Tuple<Point, Point> ChunkRange)
         {
             bool result = false;
@@ -210,6 +229,7 @@ namespace WHMapTools.Factories
 
         private void MovePointToARandomNeighbour(ref Point currentPosition, bool IsCompleteNeighbour)
         {
+            Point futurePosition;
             int upperRange = 5;
             if(IsCompleteNeighbour)
             {
@@ -217,44 +237,46 @@ namespace WHMapTools.Factories
             }
             do
             {
+
+                futurePosition = currentPosition;
                 int toMove = rnd.Next(1, upperRange);
                 switch (toMove)
                 {
                     case 1: //Move N
-                        currentPosition.X--;
+                        futurePosition.X--;
                         break;
                     case 2: //Move S
-                        currentPosition.X++;
+                        futurePosition.X++;
                         break;
                     case 3: //Move W
-                        currentPosition.Y--;
+                        futurePosition.Y--;
                         break;
                     case 4: //Move E
-                        currentPosition.Y++;
+                        futurePosition.Y++;
                         break;
                     case 5: //Move NW
-                        currentPosition.X--;
-                        currentPosition.Y--;
+                        futurePosition.X--;
+                        futurePosition.Y--;
                         break;
                     case 6: //Move NE
-                        currentPosition.X--;
-                        currentPosition.Y++;
+                        futurePosition.X--;
+                        futurePosition.Y++;
                         break;
                     case 7: //Move SW
-                        currentPosition.X++;
-                        currentPosition.Y--;
+                        futurePosition.X++;
+                        futurePosition.Y--;
                         break;
                     case 8: //Move SE
-                        currentPosition.X++;
-                        currentPosition.Y++;
+                        futurePosition.X++;
+                        futurePosition.Y++;
                         break;
 
                 }
-
-            } while (currentPosition.X < 0 || 
-                    currentPosition.Y < 0 ||
-                    currentPosition.X >= Size.Item1 ||
-                    currentPosition.Y >= Size.Item2);
+            } while (futurePosition.X < 0 ||
+                    futurePosition.Y < 0 ||
+                    futurePosition.X >= Size.Item1 ||
+                    futurePosition.Y >= Size.Item2);
+            currentPosition = futurePosition;
             
         }
 

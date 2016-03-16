@@ -50,8 +50,8 @@ namespace WHMapTools.Maps
 
         public override Image Show()
         {
-            int expandW = 4;
-            int expandH = 4;
+            int expandW = 8;
+            int expandH = 8;
             Bitmap result = new Bitmap(((Size.Item2 + 0) * expandH) + 200, ((Size.Item1 + 0) * expandW) + 20);
             //Image result = new Bitmap(Size.Item2 * expandH, Size.Item1 * expandW);
             Image temp = null;
