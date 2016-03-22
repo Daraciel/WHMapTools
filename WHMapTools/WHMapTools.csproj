@@ -44,12 +44,14 @@
     <Compile Include="Enums\Civ1\Civ1MapLandTypes.cs" />
     <Compile Include="Enums\Civ1\Civ1MapLayers.cs" />
     <Compile Include="Factories\Civilization1.cs" />
+    <Compile Include="Factories\SquaredDiamond.cs" />
     <Compile Include="Interfaces\EventArgs\NotifyEventArgs.cs" />
     <Compile Include="Interfaces\IAlgorithm.cs" />
     <Compile Include="Interfaces\IDibujable.cs" />
     <Compile Include="Interfaces\IMap.cs" />
     <Compile Include="Interfaces\INotifier.cs" />
     <Compile Include="Maps\Civ1Map.cs" />
+    <Compile Include="Maps\HeightMap.cs" />
     <Compile Include="Other\Civ1MapLayer.cs" />
     <Compile Include="Other\InitializeParams.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

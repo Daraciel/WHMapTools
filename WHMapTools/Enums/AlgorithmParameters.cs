@@ -9,6 +9,8 @@ namespace WHMapTools.Enums
     public enum AlgorithmParameters
     {
         SEED,
+        DETAIL,
+        ROUGHNESS,
         LANDMASS,
         TEMPERATURE,
         CLIMATE,

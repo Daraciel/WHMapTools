@@ -32,6 +32,7 @@ namespace WHMapTools.Maps
         {
             InitColors();
         }
+
         public Civ1Map(Tuple<int, int> size)
         {
             this.Size = size;
@@ -66,13 +67,11 @@ namespace WHMapTools.Maps
 
             return result;
         }
+
         #endregion
-
-
+        
         #region PRIVATE METHODS
-
-
-
+        
         private void InitColors()
         {
             Colors = new Dictionary<Civ1MapLandTypes, Color>();
@@ -93,7 +92,6 @@ namespace WHMapTools.Maps
             Colors.Add(Civ1MapLandTypes.DESERT, Color.FromArgb(255, 255, 255, 0));
             Colors.Add(Civ1MapLandTypes.ARCTIC, Color.FromArgb(255, 255, 255, 255));
         }
-
 
         private Image CreateLegend(int expandW, int expandH)
         {
@@ -158,8 +156,7 @@ namespace WHMapTools.Maps
             Colors.TryGetValue((Civ1MapLandTypes)LandType, out result);
             return result;
         }
-
-
+        
         #endregion
 
     }
