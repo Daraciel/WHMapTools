@@ -41,7 +41,28 @@ namespace WHMapTools.Maps
 
         public override Image Show()
         {
-            throw new NotImplementedException();
+
+            float maxHeight = this.heightmap.Max();
+
+            float minHeight = this.heightmap.Min();
+            int bnColor;
+            Bitmap result = new Bitmap(this.side, this.side);
+            Image temp = null;
+            Color c;
+            using (var graphics = Graphics.FromImage(result))
+            {
+                graphics.FillRectangle(Brushes.Red, 0, 0, result.Width, result.Height);
+                for (int x = 0; x < this.side; x++)
+                {
+                    for (int y = 0; y < this.side; y++)
+                    {
+                        bnColor = (int)((this.heightmap[x + this.side * y] / maxHeight) * 255);
+                        c = Color.FromArgb(bnColor, bnColor, bnColor);
+                        result.SetPixel(x,y, c);
+                    }
+                }
+            }
+            return result;
         }
 
         #endregion

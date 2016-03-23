@@ -126,12 +126,30 @@ namespace WHMapTools.Factories
 
         private void Diamond(int x, int y, int size, float offset)
         {
-            throw new NotImplementedException();
+            float newValue;
+            float[] values = new float[] {
+                                            this.getValue(x, y - size),
+                                            this.getValue(x + size, y),
+                                            this.getValue(x, y + size),
+                                            this.getValue(x - size, y)
+                };
+            newValue = this.Average(values) + offset;
+
+            this.setValue(x, y, newValue);
         }
 
         private void Square(int x, int y, int size, float offset)
         {
-            throw new NotImplementedException();
+            float newValue;
+            float[] values = new float[] {
+                                            this.getValue(x - size, y - size),
+                                            this.getValue(x + size, y - size),
+                                            this.getValue(x + size, y + size),
+                                            this.getValue(x - size, y + size)
+                };
+            newValue = this.Average(values) + offset;
+
+            this.setValue(x, y, newValue);
         }
 
         private float Average(float[] values)
@@ -146,10 +164,10 @@ namespace WHMapTools.Factories
 
         private void InitializeHeightMap()
         {
-            this.setValue(0, 0, this.resultMap.maxIterations);
-            this.setValue(this.resultMap.maxIterations, 0, this.resultMap.maxIterations / 2);
-            this.setValue(this.resultMap.maxIterations, this.resultMap.maxIterations, 0);
-            this.setValue(0, this.resultMap.maxIterations, this.resultMap.maxIterations / 2);
+            this.setValue(0, 0, rnd.Next(this.resultMap.maxIterations));
+            this.setValue(this.resultMap.maxIterations, 0, rnd.Next(this.resultMap.maxIterations));
+            this.setValue(this.resultMap.maxIterations, this.resultMap.maxIterations, rnd.Next(this.resultMap.maxIterations));
+            this.setValue(0, this.resultMap.maxIterations, rnd.Next(this.resultMap.maxIterations));
         }
 
         private void setValue(int x, int y, float value)

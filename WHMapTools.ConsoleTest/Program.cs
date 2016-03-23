@@ -15,14 +15,19 @@ namespace WHMapTools.ConsoleTest
     {
         static void Main(string[] args)
         {
-            TestCiv1Map();
+            //TestCiv1Map();
+            int times = 10;
+            for(int i = 0; i <times; i++)
+            {
+                TestHeightMap(i);
+            }
         }
 
         private static bool showChunks = false;
         private static bool showGeo = true;
         private static bool showTemperature = true;
 
-        private static void TestCiv1Map()
+        private static void TestCiv1Map(int i)
         {
             InitializeParams inip = new InitializeParams();
             inip.Parameters.Add(Enums.AlgorithmParameters.DEBUG, true);
@@ -34,7 +39,22 @@ namespace WHMapTools.ConsoleTest
             IMap map = factory.Create();
             Image mapImage = map.Show();
 
-            mapImage.Save("test.bmp", ImageFormat.Bmp);
+            mapImage.Save("testCiv1Map" + i+".bmp", ImageFormat.Bmp);
+        }
+
+        private static void TestHeightMap(int i)
+        {
+            InitializeParams inip = new InitializeParams();
+            //inip.Parameters.Add(Enums.AlgorithmParameters.DEBUG, true);
+            //inip.Parameters.Add(Enums.AlgorithmParameters.DEBUGCHUNKITERATIONS, 9999);
+            //inip.Parameters.Add(Enums.AlgorithmParameters.LANDMASS, 1);
+            SquaredDiamond factory = new SquaredDiamond();
+            //factory.Notify += OnNotify;
+            factory.Initialize(inip);
+            IMap map = factory.Create();
+            Image mapImage = map.Show();
+
+            mapImage.Save("testHeightMap" + i + ".bmp", ImageFormat.Bmp);
         }
 
         private static void OnNotify(object sender, Interfaces.NotifyEventArgs e)
