@@ -139,7 +139,7 @@ namespace WHMapTools.Factories
             float result = 0;
             values = values.Where(p => p != -1).ToArray();
             result = values.Sum();
-            result /
+            result /= values.Length;
 
             return result;
         }
