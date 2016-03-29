@@ -13,6 +13,7 @@ namespace WHMapTools.Factories
 {
     public class SquaredDiamond : IAlgorithm, INotifier
     {
+        private const int MAX_RANDOM_VALUE = Int32.MaxValue / 2;
 
         #region EVENTS
 
@@ -40,9 +41,9 @@ namespace WHMapTools.Factories
 
             InitializeHeightMap();
 
-            Divide(this.resultMap.maxIterations);
+            Divide(this.resultMap.maxIterations, this.Roughness);
 
-
+            NormalizeMap();
 
             return this.resultMap;
         }
@@ -93,7 +94,7 @@ namespace WHMapTools.Factories
 
         }
 
-        private void Divide(int size)
+        private void Divide(int size, float slope)
         {
             int x, y, half;
             float offset;
@@ -105,7 +106,7 @@ namespace WHMapTools.Factories
                 {
                     for (x = half; x < this.resultMap.maxIterations; x += size)
                     {
-                        offset = rnd.Next() * scale * 2 - scale;
+                        offset = getOffset(slope);
                         Square(x, y, half, offset);
                     }
                 }
@@ -115,13 +116,21 @@ namespace WHMapTools.Factories
                 {
                     for (x = (y + half) % size; x <= this.resultMap.maxIterations; x += size)
                     {
-                        offset = rnd.Next() * scale * 2 - scale;
+                        //offset = getRandomInt(MAX_RANDOM_VALUE) * scale * 2 - scale;
+
+                        offset = getOffset(slope);
                         Diamond(x, y, half, offset);
                     }
                 }
 
-                Divide(half);
+                slope *= this.Roughness;
+                Divide(half, slope);
             }
+        }
+
+        private float getOffset(float slope)
+        {
+            return getRandomInt(MAX_RANDOM_VALUE) * slope;
         }
 
         private void Diamond(int x, int y, int size, float offset)
@@ -164,10 +173,19 @@ namespace WHMapTools.Factories
 
         private void InitializeHeightMap()
         {
-            this.setValue(0, 0, rnd.Next(this.resultMap.maxIterations));
-            this.setValue(this.resultMap.maxIterations, 0, rnd.Next(this.resultMap.maxIterations));
-            this.setValue(this.resultMap.maxIterations, this.resultMap.maxIterations, rnd.Next(this.resultMap.maxIterations));
-            this.setValue(0, this.resultMap.maxIterations, rnd.Next(this.resultMap.maxIterations));
+            this.setValue(0, 0, 0);
+            this.setValue(this.resultMap.maxIterations, 0, 0);
+            this.setValue(this.resultMap.maxIterations, this.resultMap.maxIterations, 0);
+            this.setValue(0, this.resultMap.maxIterations, 0);
+        }
+
+        private int getRandomInt(int limit)
+        {
+            int result = 0;
+
+            result = rnd.Next(-limit, limit);
+
+            return result;
         }
 
         private void setValue(int x, int y, float value)
@@ -187,6 +205,16 @@ namespace WHMapTools.Factories
             }
 
             return result;
+        }
+
+        private void NormalizeMap()
+        {
+            float lowest = this.resultMap.heightmap.Min();
+            float highest = this.resultMap.heightmap.Max();
+            for(int i=0; i<this.resultMap.heightmap.Length; i++)
+            {
+                this.resultMap.heightmap[i] = (this.resultMap.heightmap[i] - lowest) / (highest - lowest);
+            }
         }
 
         #endregion
