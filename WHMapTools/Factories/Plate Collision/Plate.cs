@@ -252,20 +252,33 @@ namespace WHMapTools.Factories.PlateCollision
             return result;
         }
 
+        /// <summary>
         /// Get the amount of plate's crustal material at some location.
-        ///
-        /// @param	x	Offset on the global world map along X axis.
-        /// @param	y	Offset on the global world map along Y axis.
-        /// @return		Amount of crust at requested location.
-        float getCrust(size_t x, size_t y) const throw();
+        /// </summary>
+        /// <param name="location">Offset on the global world map.</param>
+        /// <returns>Amount of crust at requested location.</returns>
+        public float getCrust(Point location)
+        {
+            float result = 0;
 
+
+            throw new NotImplementedException();
+            return result;
+        }
+
+        /// <summary>
         /// Get the timestamp of plate's crustal material at some location.
-        ///
-        /// @param	x	Offset on the global world map along X axis.
-        /// @param	y	Offset on the global world map along Y axis.
-        /// @return		Timestamp of creation of crust at the location.
-        ///                     Zero is returned if location contains no crust.
-        size_t getCrustTimestamp(size_t x, size_t y) const throw();
+        /// </summary>
+        /// <param name="location">Offset on the global world map.</param>
+        /// <returns>Timestamp of creation of crust at the location. Zero is returned if location contains no crust.</returns>
+        public uint getCrustTimestamp(Point location)
+        {
+            uint result = 0;
+
+
+            throw new NotImplementedException();
+            return result;
+        }
 
         /// Get pointers to plate's data.
         ///
