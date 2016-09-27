@@ -28,3 +28,6 @@ C:\Users\Novanotio\Documents\WHMapTools\WHMapTools.ConsoleTest\bin\Debug\WHMapTo
 C:\Users\Novanotio\Documents\WHMapTools\WHMapTools.ConsoleTest\obj\Debug\WHMapTools.ConsoleTest.csprojResolveAssemblyReference.cache
 C:\Users\Novanotio\Documents\WHMapTools\WHMapTools.ConsoleTest\obj\Debug\WHMapTools.ConsoleTest.exe
 C:\Users\Novanotio\Documents\WHMapTools\WHMapTools.ConsoleTest\obj\Debug\WHMapTools.ConsoleTest.pdb
+C:\Users\DarkCrow\Documents\GitHub\WHMapTools\WHMapTools.ConsoleTest\bin\Debug\WHMapTools.ConsoleTest.exe.config
+C:\Users\DarkCrow\Documents\GitHub\WHMapTools\WHMapTools.ConsoleTest\obj\Debug\WHMapTools.ConsoleTest.exe
+C:\Users\DarkCrow\Documents\GitHub\WHMapTools\WHMapTools.ConsoleTest\obj\Debug\WHMapTools.ConsoleTest.pdb

@@ -18,3 +18,13 @@ C:\Users\Novanotio\Documents\WHMapTools\WHMapTool.UC\obj\Debug\WHMapTool.UC.IMap
 C:\Users\Novanotio\Documents\WHMapTools\WHMapTool.UC\obj\Debug\WHMapTool.UC.csproj.GenerateResource.Cache
 C:\Users\Novanotio\Documents\WHMapTools\WHMapTool.UC\obj\Debug\WHMapTool.UC.dll
 C:\Users\Novanotio\Documents\WHMapTools\WHMapTool.UC\obj\Debug\WHMapTool.UC.pdb
+C:\Users\DarkCrow\Documents\GitHub\WHMapTools\WHMapTool.UC\bin\Debug\WHMapTool.UC.dll
+C:\Users\DarkCrow\Documents\GitHub\WHMapTools\WHMapTool.UC\bin\Debug\WHMapTool.UC.pdb
+C:\Users\DarkCrow\Documents\GitHub\WHMapTools\WHMapTool.UC\bin\Debug\WHMapTools.dll
+C:\Users\DarkCrow\Documents\GitHub\WHMapTools\WHMapTool.UC\bin\Debug\WHMapTools.pdb
+C:\Users\DarkCrow\Documents\GitHub\WHMapTools\WHMapTool.UC\obj\Debug\WHMapTool.UC.csprojResolveAssemblyReference.cache
+C:\Users\DarkCrow\Documents\GitHub\WHMapTools\WHMapTool.UC\obj\Debug\WHMapTool.UC.CivilizationMapDesigner.resources
+C:\Users\DarkCrow\Documents\GitHub\WHMapTools\WHMapTool.UC\obj\Debug\WHMapTool.UC.IMapDesigner.resources
+C:\Users\DarkCrow\Documents\GitHub\WHMapTools\WHMapTool.UC\obj\Debug\WHMapTool.UC.csproj.GenerateResource.Cache
+C:\Users\DarkCrow\Documents\GitHub\WHMapTools\WHMapTool.UC\obj\Debug\WHMapTool.UC.dll
+C:\Users\DarkCrow\Documents\GitHub\WHMapTools\WHMapTool.UC\obj\Debug\WHMapTool.UC.pdb

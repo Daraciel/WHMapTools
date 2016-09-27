@@ -44,6 +44,8 @@
     <Compile Include="Enums\Civ1\Civ1MapLandTypes.cs" />
     <Compile Include="Enums\Civ1\Civ1MapLayers.cs" />
     <Compile Include="Factories\Civilization1.cs" />
+    <Compile Include="Factories\Plate Collision\Plate.cs" />
+    <Compile Include="Factories\Plate Collision\SegmentData.cs" />
     <Compile Include="Factories\SquaredDiamond.cs" />
     <Compile Include="Interfaces\EventArgs\NotifyEventArgs.cs" />
     <Compile Include="Interfaces\IAlgorithm.cs" />
@@ -56,7 +58,9 @@
     <Compile Include="Other\InitializeParams.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Utils\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

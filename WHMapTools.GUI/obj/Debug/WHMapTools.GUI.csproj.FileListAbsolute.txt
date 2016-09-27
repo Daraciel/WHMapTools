@@ -24,3 +24,16 @@ C:\Users\Novanotio\Documents\WHMapTools\WHMapTools.GUI\obj\Debug\WHMapTools.GUI.
 C:\Users\Novanotio\Documents\WHMapTools\WHMapTools.GUI\obj\Debug\WHMapTools.GUI.csproj.GenerateResource.Cache
 C:\Users\Novanotio\Documents\WHMapTools\WHMapTools.GUI\obj\Debug\WHMapTools.GUI.exe
 C:\Users\Novanotio\Documents\WHMapTools\WHMapTools.GUI\obj\Debug\WHMapTools.GUI.pdb
+C:\Users\DarkCrow\Documents\GitHub\WHMapTools\WHMapTools.GUI\bin\Debug\WHMapTools.GUI.exe.config
+C:\Users\DarkCrow\Documents\GitHub\WHMapTools\WHMapTools.GUI\bin\Debug\WHMapTools.GUI.exe
+C:\Users\DarkCrow\Documents\GitHub\WHMapTools\WHMapTools.GUI\bin\Debug\WHMapTools.GUI.pdb
+C:\Users\DarkCrow\Documents\GitHub\WHMapTools\WHMapTools.GUI\bin\Debug\WHMapTool.UC.dll
+C:\Users\DarkCrow\Documents\GitHub\WHMapTools\WHMapTools.GUI\bin\Debug\WHMapTools.dll
+C:\Users\DarkCrow\Documents\GitHub\WHMapTools\WHMapTools.GUI\bin\Debug\WHMapTool.UC.pdb
+C:\Users\DarkCrow\Documents\GitHub\WHMapTools\WHMapTools.GUI\bin\Debug\WHMapTools.pdb
+C:\Users\DarkCrow\Documents\GitHub\WHMapTools\WHMapTools.GUI\obj\Debug\WHMapTools.GUI.csprojResolveAssemblyReference.cache
+C:\Users\DarkCrow\Documents\GitHub\WHMapTools\WHMapTools.GUI\obj\Debug\WHMapTools.GUI.Form1.resources
+C:\Users\DarkCrow\Documents\GitHub\WHMapTools\WHMapTools.GUI\obj\Debug\WHMapTools.GUI.Properties.Resources.resources
+C:\Users\DarkCrow\Documents\GitHub\WHMapTools\WHMapTools.GUI\obj\Debug\WHMapTools.GUI.csproj.GenerateResource.Cache
+C:\Users\DarkCrow\Documents\GitHub\WHMapTools\WHMapTools.GUI\obj\Debug\WHMapTools.GUI.exe
+C:\Users\DarkCrow\Documents\GitHub\WHMapTools\WHMapTools.GUI\obj\Debug\WHMapTools.GUI.pdb
