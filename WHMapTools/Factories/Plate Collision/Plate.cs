@@ -12,6 +12,24 @@ namespace WHMapTools.Factories.PlateCollision
 
         #region CONSTANTS
 
+        private const float CONT_BASE = 1.0f;
+
+        #endregion
+
+        #region CONSTRUCTORS
+
+        public Plate(ref float[,] heightMap, uint width, uint height, Point leftTopCorner,
+                    uint plateAge, uint worldSide)
+        {
+            throw new NotImplementedException();
+            this.width = width;
+            this.height = height;
+            this.leftTopCorner = leftTopCorner;
+            //this.age = plateAge;
+            this.worldSide = worldSide;
+
+        }
+
         #endregion
 
         #region FIELDS
@@ -20,8 +38,10 @@ namespace WHMapTools.Factories.PlateCollision
         private uint[] age;
         private uint width;
         private uint height;
+        private uint worldSide;
 
         private float mass;
+        private PointF leftTopCorner;
         private float top;
         private float left;
 
@@ -30,6 +50,10 @@ namespace WHMapTools.Factories.PlateCollision
         private float velocity;
         private PointF directionVector;
         private PointF accelerationVector;
+
+        private List<SegmentData> crustData;
+        private List<uint> crustID;
+        uint activeContinent;
 
         #endregion
 
@@ -279,46 +303,97 @@ namespace WHMapTools.Factories.PlateCollision
             throw new NotImplementedException();
             return result;
         }
+        
+        /// <summary>
+        ///  Get pointers to plate's data.
+        /// </summary>
+        /// <param name="crustHeight">Reference of crust height map is stored here.</param>
+        /// <param name="crustTime">Reference of crust timestamp map is stored here.</param>
+        public void getMap(ref float crustHeight, ref float crustTime)
+        {
+            throw new NotImplementedException();
+        }
 
-        /// Get pointers to plate's data.
+        /// <summary>
+        /// Moves plate along it's trajectory.
+        /// </summary>
+        public void move()
+        {
+            throw new NotImplementedException();
+        }
+        
+        /// <summary>
+        /// Clear any earlier continental crust partitions.
         ///
-        /// @param	c	Adress of crust height map is stored here.
-        /// @param	t	Adress of crust timestamp map is stored here.
-        void getMap(const float** c, const size_t** t) const throw();
+        /// Plate has an internal bookkeeping of distinct areas of continental
+        /// crust for more realistic collision responce. However as the number
+        /// of collisions that plate experiences grows, so does the bookkeeping
+        /// of a continent become more and more inaccurate. Finally it results
+        /// in striking artefacts that cannot overlooked.
+        ///
+        /// To alleviate this problem without the need of per iteration
+        /// recalculations plate supplies caller a method to reset its
+        /// bookkeeping and start clean.
+        /// </summary>
+        public void resetSegments()
+        {
+            throw new NotImplementedException();
+        }
+        
+        /// <summary>
+        /// Remember the currently processed continent's segment number.
+        /// </summary>
+        /// <param name="collisionPoint">Origin of collision on global world map.</param>
+        public void selectCollisionSegment(Point collisionPoint)
+        {
+            throw new NotImplementedException();
+        }
 
-        void move() throw(); ///< Moves plate along it's trajectory.
+        /// <summary>
+        /// Set the amount of plate's crustal material at some location.
+        ///
+        /// If amount of crust to be set is negative, it'll be set to zero.
+        /// </summary>
+        /// <param name="offset">Offset on the global world map.</param>
+        /// <param name="crustAmount">Amount of crust at given location.</param>
+        /// <param name="crustTime">Time of creation of new crust.</param>
+        void setCrust(Point offset, float crustAmount, uint crustTime)
+        {
+            throw new NotImplementedException();
+        }
 
-	/// Clear any earlier continental crust partitions.
-	///
-	/// Plate has an internal bookkeeping of distinct areas of continental
-	/// crust for more realistic collision responce. However as the number
-	/// of collisions that plate experiences grows, so does the bookkeeping
-	/// of a continent become more and more inaccurate. Finally it results
-	/// in striking artefacts that cannot overlooked.
-	///
-	/// To alleviate this problem without the need of per iteration
-	/// recalculations plate supplies caller a method to reset its
-	/// bookkeeping and start clean.
-	void resetSegments() throw();
 
-	/// Remember the currently processed continent's segment number.
-	///
-	/// @param	coll_x	Origin of collision on global world map (X).
-	/// @param	coll_y	Origin of collision on global world map (Y).
-	void selectCollisionSegment(size_t coll_x, size_t coll_y) throw();
-
-	/// Set the amount of plate's crustal material at some location.
-	///
-	/// If amount of crust to be set is negative, it'll be set to zero.
-	///
-	/// @param	x	Offset on the global world map along X axis.
-	/// @param	y	Offset on the global world map along Y axis.
-	/// @param	z	Amount of crust at given location.
-	/// @param	t	Time of creation of new crust.
-	void setCrust(size_t x, size_t y, float z, size_t t) throw();
         #endregion
 
         #region PRIVATE METHODS
+
+        /// <summary>
+        /// Separate a continent at (X, Y) to its own partition.
+        ///
+        /// Method analyzes the pixels 4-ways adjacent at the given location
+        /// and labels all connected continental points with same segment ID.
+        /// </summary>
+        /// <param name="startingPoint">Offset on the local height map.</param>
+        /// <returns>ID of created segment on success, otherwise -1.</returns>
+        private uint createSegment(Point startingPoint)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Translate world coordinates into offset within plate's height map.
+        ///
+        /// Iff the global world map coordinates are within plate's height map,
+        /// the values of passed coordinates will be altered to contain the
+        /// X and y offset within the plate's height map. Otherwise values are
+        /// left intact.
+        /// </summary>
+        /// <param name="offset">Offset on the global world map.</param>
+        /// <returns>Offset in height map or -1 on error.</returns>
+        private uint getMapIndex(ref Point offset)
+        {
+            throw new NotImplementedException();
+        }
 
         #endregion
 
