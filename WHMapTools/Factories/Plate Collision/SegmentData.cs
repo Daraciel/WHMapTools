@@ -98,7 +98,6 @@ namespace WHMapTools.Factories.PlateCollision
         #region PRIVATE METHODS
 
         #endregion
-
-
+        
     }
 }

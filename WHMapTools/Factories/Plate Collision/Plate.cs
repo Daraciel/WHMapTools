@@ -13,7 +13,9 @@ namespace WHMapTools.Factories.PlateCollision
         #region CONSTANTS
 
         private const float CONT_BASE = 1.0f;
-
+        private const uint INITIAL_SPEED_X = 1;
+        private const uint DEFORMATION_WEIGHT = 5;
+        
         #endregion
 
         #region CONSTRUCTORS

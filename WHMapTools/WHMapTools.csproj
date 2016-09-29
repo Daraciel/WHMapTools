@@ -47,6 +47,7 @@
     <Compile Include="Factories\Plate Collision\Litosphere.cs" />
     <Compile Include="Factories\Plate Collision\Plate.cs" />
     <Compile Include="Factories\Plate Collision\PlateArea.cs" />
+    <Compile Include="Factories\Plate Collision\PlateCollision.cs" />
     <Compile Include="Factories\Plate Collision\SegmentData.cs" />
     <Compile Include="Factories\PlateTectonics.cs" />
     <Compile Include="Factories\SquaredDiamond.cs" />
