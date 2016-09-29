@@ -29,7 +29,7 @@ namespace WHMapTools.Factories
         private Random rnd;
         private bool Debug;
 
-        private HeightMap resultMap;
+        private SquaredHeightMap resultMap;
 
         #endregion
 
@@ -37,7 +37,7 @@ namespace WHMapTools.Factories
 
         public override IMap Create()
         {
-            this.resultMap = new HeightMap(this.Detail);
+            this.resultMap = new SquaredHeightMap(this.Detail);
 
             InitializeHeightMap();
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using WHMapTools.Enums;
 using WHMapTools.Interfaces;
 
@@ -11,28 +12,68 @@ namespace WHMapTools.Maps
     public class HeightMap : IMap
     {
 
-        #region PROPERTIES
+        #region CONSTANTS
 
-        public float[] heightmap;
+        #endregion
+        
+        #region CONSTRUCTORS
 
-        public int side;
-
-        public int maxIterations;
+        public HeightMap(uint height, uint width)
+        {
+            this.height = height;
+            this.width = width;
+            InitializeMap();
+        }
 
         #endregion
 
         #region FIELDS
 
+        private float[] heightmap;
+        private uint height;
+        private uint width;
+        
         #endregion
 
-        #region CONSTRUCTORS
+        #region PROPERTIES
 
-        public HeightMap(int detail)
+        public float[] Heightmap
         {
-            this.side = (int)Math.Pow(2, detail) + 1;
-            this.maxIterations = this.side - 1;
-            this.Size = new Tuple<int, int>(this.side, this.side);
-            this.heightmap = new float[this.Size.Item1 * this.Size.Item2];
+            get
+            {
+                return heightmap;
+            }
+
+            set
+            {
+                heightmap = value;
+            }
+        }
+
+        public uint Height
+        {
+            get
+            {
+                return height;
+            }
+
+            set
+            {
+                height = value;
+            }
+        }
+
+        public uint Width
+        {
+            get
+            {
+                return width;
+            }
+
+            set
+            {
+                width = value;
+            }
         }
 
         #endregion
@@ -41,24 +82,28 @@ namespace WHMapTools.Maps
 
         public override Image Show()
         {
+            float maxHeight = this.Heightmap.Max();
 
-            float maxHeight = this.heightmap.Max();
-
-            float minHeight = this.heightmap.Min();
+            //float minHeight = this.Heightmap.Min();
             int bnColor;
-            Bitmap result = new Bitmap(this.side, this.side);
-            Image temp = null;
+            long position = 0;
+            Bitmap result = new Bitmap((int)this.width, (int)this.height);
+            //Image temp = null;
             Color c;
             using (var graphics = Graphics.FromImage(result))
             {
                 graphics.FillRectangle(Brushes.Red, 0, 0, result.Width, result.Height);
-                for (int x = 0; x < this.side; x++)
+                for (int x = 0; x < this.width; x++)
                 {
-                    for (int y = 0; y < this.side; y++)
+                    for (int y = 0; y < this.height; y++)
                     {
-                        bnColor = (int)((this.heightmap[x + this.side * y] / maxHeight) * 255);
-                        c = Color.FromArgb(bnColor, bnColor, bnColor);
-                        result.SetPixel(x,y, c);
+                        position = x + this.width * y;
+                        if(this.heightmap.Length > position)
+                        {
+                            bnColor = (int)((this.Heightmap[position] / maxHeight) * 255);
+                            c = Color.FromArgb(bnColor, bnColor, bnColor);
+                            result.SetPixel(x, y, c);
+                        }
                     }
                 }
             }
@@ -67,7 +112,21 @@ namespace WHMapTools.Maps
 
         #endregion
 
+        #region PUBLIC METHODS
+
+        #endregion
+
         #region PRIVATE METHODS
+
+        private void InitializeMap()
+        {
+            this.heightmap = new float[this.width * this.height];
+
+            Parallel.ForEach(this.heightmap, (point) =>
+            {
+                point = 0.0f;
+            });
+        }
 
         #endregion
     }
