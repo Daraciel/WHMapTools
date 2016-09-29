@@ -13,7 +13,11 @@ namespace WHMapTools.Factories
 {
     public class SquaredDiamond : IAlgorithm, INotifier
     {
+        #region CONSTANTS
+
         private const int MAX_RANDOM_VALUE = Int32.MaxValue / 2;
+
+        #endregion
 
         #region EVENTS
 
