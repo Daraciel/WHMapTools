@@ -27,11 +27,11 @@ namespace WHMapTools.Factories
         
         #region FIELDS
 
-        private int Detail;
+        private uint Detail;
         private int? Seed;
         private float Roughness;
         private Random rnd;
-        private bool Debug;
+        //private bool Debug;
 
         private SquaredHeightMap resultMap;
 
@@ -60,7 +60,7 @@ namespace WHMapTools.Factories
                 switch (kvp.Key)
                 {
                     case AlgorithmParameters.DETAIL:
-                        Detail = (int)kvp.Value;
+                        Detail = (uint)kvp.Value;
                         break;
                     case AlgorithmParameters.ROUGHNESS:
                         Roughness = (float)kvp.Value;

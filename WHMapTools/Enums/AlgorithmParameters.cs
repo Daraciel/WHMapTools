@@ -17,6 +17,17 @@ namespace WHMapTools.Enums
         AGE,
         SIZE,
         DEBUG,
-        DEBUGCHUNKITERATIONS
+        DEBUGCHUNKITERATIONS,
+
+
+        //Used for Tectonics
+        BASEMAP,
+        SEALEVEL,
+        EROSIONPERIOD,
+        FOLDINGRATIO,
+        AGGREGATIONCOUNT,
+        AGGREGATIONPERCENTAGE,
+        MAXCYCLES
+
     }
 }

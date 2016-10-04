@@ -12,6 +12,8 @@ namespace WHMapTools.Interfaces
     public abstract class IAlgorithm
     {
 
+        protected bool Debug;
+
         /**
          * 
          */

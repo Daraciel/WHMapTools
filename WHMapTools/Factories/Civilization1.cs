@@ -49,7 +49,7 @@ namespace WHMapTools.Factories
         private int? Seed;
         private Tuple<int, int> Size;
         private Random rnd;
-        private bool Debug;
+        //private bool Debug;
         private int DebugChunkIterations;
 
         private Civ1Map resultMap;

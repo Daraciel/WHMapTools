@@ -8,7 +8,7 @@ using WHMapTools.Interfaces;
 
 namespace WHMapTools.Maps
 {
-    public class SquaredHeightMap : IMap
+    public class SquaredHeightMap : HeightMap
     {
 
         #region PROPERTIES
@@ -27,7 +27,7 @@ namespace WHMapTools.Maps
 
         #region CONSTRUCTORS
 
-        public SquaredHeightMap(int detail)
+        public SquaredHeightMap(uint detail) : base(detail, detail)
         {
             this.side = (int)Math.Pow(2, detail) + 1;
             this.maxIterations = this.side - 1;
